@@ -108,6 +108,8 @@ summon() {
 
 Something a bit more dramatic 👹
 
+https://github.com/user-attachments/assets/735da73b-a489-4060-8a42-cbefa7db6222
+
 ```bash
 # Summon Tengu (Claude Code) with animated ASCII art
 summon() {
@@ -120,7 +122,7 @@ summon() {
     # Function to print string character by character
     print_animated() {
       local text="$1"
-      local delay="${2:-0.0025}"
+      local delay="${2:-0.0005}"
       for (( i=0; i<${#text}; i++ )); do
         printf "%s" "${text:$i:1}"
         sleep "$delay"
