@@ -1,0 +1,24 @@
+{
+  "name": "claude-code-processing-words-analysis",
+  "version": "1.0.0",
+  "description": "Analysis of processing words used in Claude Code CLI across all versions",
+  "type": "module",
+  "scripts": {
+    "extract-all": "node extract-processing-words-robust.js",
+    "extract-batch": "node extract-batch.js",
+    "combine-batches": "node combine-batches.js",
+    "test-problematic": "node test-problematic-versions.js"
+  },
+  "keywords": [
+    "claude-code",
+    "cli",
+    "analysis",
+    "processing-words",
+    "anthropic"
+  ],
+  "author": "Levin Dixon",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

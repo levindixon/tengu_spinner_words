@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tgz
+package/
+anthropic-ai-claude-code-*.tgz
+
+# Batch processing files (if running extraction)
+processing-words-batch-*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
