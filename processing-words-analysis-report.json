@@ -1,0 +1,55 @@
+{
+  "overview": {
+    "totalVersionsAnalyzed": 139,
+    "successRate": "100%",
+    "dateRange": "0.2.9 to 1.0.48"
+  },
+  "wordCountEvolution": [
+    {
+      "wordCount": 56,
+      "versions": 19,
+      "description": "Original set (missing 'Vibing')"
+    },
+    {
+      "wordCount": 57,
+      "versions": 100,
+      "description": "Standard set (pre-expansion)"
+    },
+    {
+      "wordCount": 90,
+      "versions": 20,
+      "description": "Expanded set (current)"
+    }
+  ],
+  "majorChanges": [
+    {
+      "version": "0.2.42",
+      "previousVersion": "0.2.41",
+      "wordCountChange": "56 → 57",
+      "wordsAdded": 1,
+      "wordsRemoved": 0
+    },
+    {
+      "version": "1.0.29",
+      "previousVersion": "1.0.28",
+      "wordCountChange": "57 → 90",
+      "wordsAdded": 33,
+      "wordsRemoved": 0
+    }
+  ],
+  "variableNamePatterns": {
+    "totalUnique": 119,
+    "examples": [
+      "Aq6",
+      "At6",
+      "C31",
+      "CL3",
+      "Cu5",
+      "D31",
+      "DE5",
+      "Dt6",
+      "Ed5",
+      "F31"
+    ]
+  }
+}
