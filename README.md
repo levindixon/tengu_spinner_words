@@ -92,7 +92,7 @@ Tengu (天狗) are supernatural beings from Japanese folklore, often depicted as
 
 ### Summoning Tengu
 
-For those who want to embrace the mystical nature of Claude Code, you can add this fun alias to your shell configuration (`.zshrc` or `.bashrc`):
+For those who want to embrace the mystical nature of Claude Code, you can add either of these fun scripts to your shell configuration (`.zshrc` or `.bashrc`):
 
 ```bash
 # Summon Tengu (Claude Code)
@@ -106,7 +106,77 @@ summon() {
 }
 ```
 
-Now instead of typing `claude`, you can type `summon tengu` to invoke Claude Code!
+Something a bit more dramatic 👹
+
+```bash
+# Summon Tengu (Claude Code) with animated ASCII art
+summon() {
+  if [[ "$1" == "tengu" ]]; then
+    shift
+
+    # Clear screen for dramatic effect
+    clear
+
+    # Function to print string character by character
+    print_animated() {
+      local text="$1"
+      local delay="${2:-0.0025}"
+      for (( i=0; i<${#text}; i++ )); do
+        printf "%s" "${text:$i:1}"
+        sleep "$delay"
+      done
+      printf "\n"
+    }
+
+    # Draw the Tengu face with accelerating animation
+    echo ""
+    lines=(
+      "                    👹👹👹👹👹👹👹👹"
+      "                👹👹👹👹👹👹👹👹👹👹👹👹"
+      "              👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "            👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "          👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "        👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "      👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "    👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "    👹👹👹👹  👹👹👹👹👹👹👹👹👹👹👹👹  👹👹👹👹"
+      "    👹👹👹      👹👹👹👹👹👹👹👹      👹👹👹"
+      "    👹👹👹  ⚫  👹👹👹👹👹👹👹👹  ⚫  👹👹👹"
+      "    👹👹👹      👹👹👹👹👹👹👹👹      👹👹👹"
+      "    👹👹👹👹👹👹👹👹👹  👹  👹👹👹👹👹👹👹👹"
+      "    👹👹👹👹👹👹👹👹      👹👹👹👹👹👹👹👹"
+      "      👹👹👹👹👹👹👹  👹👹  👹👹👹👹👹👹👹"
+      "        👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "          👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "            👹👹👹👹👹👹👹👹👹👹👹👹👹👹"
+      "              👹👹👹👹👹👹👹👹👹👹👹👹"
+      "                👹👹👹👹👹👹👹👹👹👹"
+    )
+
+    # Print with accelerating speed
+    delay=0.0025
+    for line in "${lines[@]}"; do
+      print_animated "$line" "$delay"
+      # Accelerate by reducing delay
+      delay=$(echo "$delay * 0.9" | bc -l)
+    done
+    echo ""
+    sleep 0.3
+    print_animated "              🌸 SUMMONING TENGU... 🌸" 0.05
+    echo ""
+
+    # Dramatic pause
+    sleep 1
+
+    # Launch Claude Code with any arguments passed
+    claude "$@"
+  else
+    echo "Usage: summon tengu [claude-args]"
+    echo "Example: summon tengu --help"
+    echo "Example: summon tengu \"Help me fix this bug\""
+  fi
+}
+```
 
 ## About
 
