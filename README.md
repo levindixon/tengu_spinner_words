@@ -90,6 +90,24 @@ While analyzing Claude Code's source code across 139 versions, we uncovered that
 
 Tengu (天狗) are supernatural beings from Japanese folklore, often depicted as skilled warriors and mischievous spirits known for their cleverness and ability to shape-shift. The name seems fitting for a tool that transforms natural language into code with a touch of whimsy in its processing words.
 
+### Summoning Tengu
+
+For those who want to embrace the mystical nature of Claude Code, you can add this fun alias to your shell configuration (`.zshrc` or `.bashrc`):
+
+```bash
+# Summon Tengu (Claude Code)
+summon() {
+  if [[ "$1" == "tengu" ]]; then
+    shift
+    claude "$@"
+  else
+    echo "Usage: summon tengu [claude-args]"
+  fi
+}
+```
+
+Now instead of typing `claude`, you can type `summon tengu` to invoke Claude Code!
+
 ## About
 
 This repository analyzes all processing words used by [Claude Code CLI](https://github.com/anthropics/claude-code), the official CLI for Claude by Anthropic. These words appear randomly while Claude processes requests.
